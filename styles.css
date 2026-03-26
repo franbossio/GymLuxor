@@ -605,11 +605,110 @@
   }
   .map-link:hover { background: var(--red); color: var(--white); }
 
+  /* ── HORARIOS EN CARDS DE ACTIVIDADES ── */
+  .act-horarios {
+    margin-top: 1.2rem;
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding-top: 1rem;
+  }
+  .act-horario-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .35rem 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .85rem;
+  }
+  .act-horario-row span:first-child {
+    color: var(--text-muted);
+    letter-spacing: .05em;
+  }
+  .act-horario-row span:last-child {
+    color: var(--red);
+    font-weight: 600;
+    letter-spacing: .08em;
+  }
+
+  /* ── NUTRICIÓN ── */
+  #nutricion {
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+  #nutricion::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(240,120,0,.4), transparent);
+  }
+  .nutricion-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1100px;
+  }
+  .nutricion-left p {
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  .nutricion-lista {
+    list-style: none;
+    padding: 0;
+  }
+  .nutricion-lista li {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .9rem;
+    letter-spacing: .1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding: .6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  .nutricion-lista li::before {
+    content: '';
+    display: block;
+    width: 20px; height: 2px;
+    background: var(--red);
+    flex-shrink: 0;
+  }
+  .nutricion-card {
+    background: var(--gray);
+    padding: 3rem 2.5rem;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    text-align: center;
+  }
+  .nutricion-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+  .nutricion-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .08em;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  .nutricion-card p {
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: .95rem;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav ul { display: none; }
     .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
     .info-inner { grid-template-columns: 1fr; }
+    .nutricion-inner { grid-template-columns: 1fr; gap: 3rem; }
     .info-block:first-child { border-right: none; border-bottom: 1px solid rgba(255,255,255,.06); }
     section { padding: 5rem 1.5rem; }
     nav { padding: 1.2rem 1.5rem; }
