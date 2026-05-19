@@ -520,9 +520,10 @@
   }
   .info-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
-    max-width: 1100px;
+    width: 100%;          /* ← clave */
+    max-width: none;
   }
   .info-block {
     padding: 4rem 3rem;
@@ -707,7 +708,7 @@
   @media (max-width: 768px) {
     nav ul { display: none; }
     .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .info-inner { grid-template-columns: 1fr; }
+    .info-inner { grid-template-columns: 1fr !important; }
     .nutricion-inner { grid-template-columns: 1fr; gap: 3rem; }
     .info-block:first-child { border-right: none; border-bottom: 1px solid rgba(255,255,255,.06); }
     section { padding: 5rem 1.5rem; }
